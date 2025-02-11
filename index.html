@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a7fa5fd2a2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Ferreteria</title>
+</head>
+<body>
+    <header>
+        <div class="mainLogo">
+            <h1><a href="#">Ferreteria</a></h1>
+        </div>
+        <div class="searchingBox">
+            <input type="text" placeholder="Buscar Producto">
+            <button type="submit">Buscar</button>
+        </div>
+        <!-- <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Quienes Somos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <main>
+        <section class="hero">
+            <article class="heroInfo">
+                <div class="heroInfoCont">
+                    <h2>Titulo Presentacion</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et architecto sit deleniti nulla neque odit suscipit alias porro, similique quasi magnam? Voluptatibus non nesciunt odio, minima inventore doloremque facilis impedit.</p>
+                </div>
+                <div class="heroContactBox">
+                    <div class="heroEmailContact">
+                        <i class="fa-solid fa-envelope" style="color: rgb(87, 36, 181);"></i>
+                        <span>Contactanos</span>
+                    </div>
+                    <div class="heroPhoneContact">
+                        <i class="fa-solid fa-phone" style="color: green;"></i>
+                        <span>+57 1234567890</span>
+                    </div>
+                </div>    
+            </article>
+        </section>
+        <section class="brands">
+            <h2>MARCAS ALIADAS</h2>
+            <article class="logos">
+                <div class="logos-slide">
+                    <img src="/Images/logos/3m.svg" alt="3m">
+                    <img src="/Images/logos/bosch.svg" alt="bosch">
+                    <img src="/Images/logos/cemex.svg" alt="cemex">
+                    <img src="/Images/logos/dewalt.svg" alt="dewalt">
+                    <img src="/Images/logos/makita.svg" alt="makita">
+                    <img src="/Images/logos/milwaukee.svg" alt="milwaukee">
+                    <img src="/Images/logos/truper.svg" alt="truper">
+                    <img src="/Images/logos/stanley.png" alt="yale">
+                </div>
+            </article>
+            <script>
+                var copy = document.querySelector(".logos-slide").cloneNode(true);
+                document.querySelector(".logos").appendChild(copy);
+            </script>
+        </section>
+        <section class="productCategory">
+            <h2>CATEGORIA DE PRODUCTOS</h2>
+            <article class="gridCategory">
+                <a href="#" class="boxCategory">
+                    <img src="./Images/toolkit.png" alt="ruler logo">
+                    <span>Ferreteria</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/lock.png" alt="ruler logo">
+                    <span>Cerrajeria</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/plumbing.png" alt="ruler logo">
+                    <span>Plomeria</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/screw.png" alt="ruler logo">
+                    <span>Tornilleria</span>
+                </a>
+            </article>
+            <article class="gridCategory">
+                <a href="#" class="boxCategory">
+                    <img src="./Images/paint.png" alt="ruler logo">
+                    <span>Pinturas y <br>Complementos</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/electricity.png" alt="ruler logo">
+                    <span>Iluminacion y <br>Electricos</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/adhesives.png" alt="ruler logo">
+                    <span>Adhesivos</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/tools.png" alt="ruler logo">
+                    <span>Herramientas</span>
+                </a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
+
+
+

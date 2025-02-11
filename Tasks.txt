@@ -1,0 +1,25 @@
+#090b64
+
+Inicio = Jueves 6 de febrero de 2025
+Plazo maximo entrega = 6 de Marzo de 2025
+
+- Crear barra de busqueda en el header.
+- Hacer mosaico de categorias de productos debajo del hero.
+- Bajar imagen de fondo del hero.
+- Crear cotizacion pagina web y pasarsela al cliente.
+- Crear cuenta de cobro.
+
+
+Secciones (Pagina Principal):
+* Marcas de productos con las que se trabaja ***
+* Mosaico de categorias de productos ***
+* Productos destacados
+* Beneficios (Por que comprar en nuestra ferreteria realizar un mosacio como el de VortexDev)
+* Pasos o procedimiento para comprar un producto (bien grafico)
+
+Pedir al cliente:
+* Marcas con las que trabaja (las que mas pueda)
+* Productos mas vendidos o destacados (minimo 10 y con el nombre descriptivo de cada uno)
+* Categorias de productos que vende (ejemplo: Cerrajeria, Electricos, Pinturas. Tornilleria, Plomeria, etc)
+
+
