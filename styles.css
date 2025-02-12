@@ -10,8 +10,8 @@
 }
 
 header {
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
     z-index: 3;
     background: linear-gradient(to left, #061160, #090b64);
     height: 100px;
@@ -200,6 +200,112 @@ nav ul, a{
     margin-bottom: 30px;
 }
 
+
+/*-----Featured Products-----*/
+
+.featuredProducts {
+    padding-top: 100px;
+    min-height: 100vh;
+    background: #abaeb6;
+}
+
+.featuredProducts h2 {
+    color: #434449;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #d7d7d7;
+}
+
+.card-list .card-item .product-name {
+    color: #444444;
+    font-size: 28px;
+    margin: 0;
+    height: 70px;
+    line-height: 1.3;
+}
+
+.card-list .card-item .user-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.card-list .card-item .user-profession {
+    font-size: 1.3rem;
+    color: #222222;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card-list .card-item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #eee;
+    font-weight: 500;
+    cursor: pointer;
+    background: #413e3e;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .message-button:hover {
+    background: #5c6376;
+}
+
+.card-list .card-item .quantityProduct {
+    display: flex;
+}
+
+.card-list .card-item .quantityProduct .quantity {
+    border: none;
+    outline: none;
+    width: 80px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+}
+
+.slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -50px;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+    color: #050a35;
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+    }
+}
 
 
 

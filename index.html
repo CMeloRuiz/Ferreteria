@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a7fa5fd2a2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>Ferreteria</title>
 </head>
 <body>
@@ -44,6 +45,7 @@
                 </div>    
             </article>
         </section>
+
         <section class="brands">
             <h2>MARCAS ALIADAS</h2>
             <article class="logos">
@@ -63,6 +65,7 @@
                 document.querySelector(".logos").appendChild(copy);
             </script>
         </section>
+
         <section class="productCategory">
             <h2>CATEGORIA DE PRODUCTOS</h2>
             <article class="gridCategory">
@@ -101,6 +104,101 @@
                     <span>Herramientas</span>
                 </a>
             </article>
+        </section>
+
+        <section class="featuredProducts">
+            <h2>PRODUCTOS DESTACADOS</h2>
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">
+                            <img src="./images/Products/taladro-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Taladro</h2>
+                            <p class="user-profession">$450.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>            
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./images/Products/alicates-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Alicates</h2>
+                            <p class="user-profession">$56.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./images/Products/destornillador-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Destornillador</h2>
+                            <p class="user-profession">$32.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./images/Products/cinta_aislante-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Cinta Aislante</h2>
+                            <p class="user-profession">$15.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./images/Products/cinta_enmascarar-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Cinta de Enmascarar</h2>
+                            <p class="user-profession">$20.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./images/Products/brocha-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Brocha</h2>
+                            <p class="user-profession">$63.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./images/Products/pulidora-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Pulidora</h2>
+                            <p class="user-profession">$506.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./images/Products/interruptor-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Interruptor Triple</h2>
+                            <p class="user-profession">$42.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+                    </div>
+        
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script src="./script_featured_prod.js"></script>
         </section>
     </main>
 </body>
