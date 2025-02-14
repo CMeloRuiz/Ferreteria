@@ -1,7 +1,7 @@
-#090b64
-
 Inicio = Jueves 6 de febrero de 2025
 Plazo maximo entrega = 6 de Marzo de 2025
+#00467e
+#003055
 
 - Crear barra de busqueda en el header y programarla para que busque la palabra dada por el usuario.
 - Bajar imagen de fondo del hero.
@@ -11,6 +11,12 @@ Plazo maximo entrega = 6 de Marzo de 2025
 - En el menu del header colocar la opcion "Productos" y desplegar las categorias cuando se haga click.
 - Pasar los elementos del Carousel automaticamente en "Productos destacados" y parar cuando se ponga el mouse encima.
 - Arreglar el bloqueo del slider de las marcas.
+- Incluir el medio de pago por codigo QR.
+- Crear el footer.
+- Arreglar el header y el hero.
+- Hacer diseño responsive de la pagina principal.
+- En el menu de navegacion hacer que "Productos" despliegue las categorias.
+- Hacer mas pequeña la barra de busqueda.
 
 Secciones (Pagina Principal):
 * Marcas de productos con las que se trabaja ***
@@ -24,20 +30,21 @@ Secciones (Pagina Principal):
   - Brocha *
   - Pulidora *
   - Interruptor triple *
-	
+
 * Beneficios (Por que comprar en nuestra ferreteria realizar un mosaico como el de VortexDev) ***
-* Pasos o procedimiento para comprar un producto (bien grafico)
+* Pasos o procedimiento para comprar un producto (bien grafico) ***
 1. Explora y elige tus productos
 2. Añádelos a tu carrito
 3. Elige tu método de pago
 4. Recibe tu pedido en casa
 
-Pedir al cliente:
-* Marcas con las que trabaja (las que mas pueda)
-* Productos mas vendidos o destacados (minimo 10 y con el nombre descriptivo de cada uno)
-* Categorias de productos que vende (ejemplo: Cerrajeria, Electricos, Pinturas. Tornilleria, Plomeria, etc)
+- Footer:
+* Ferreteria
+* Categorias
+* Enlaces Rapidos
+* Contactanos
 
 
-<input type="number" name="qty" value="1" class="input-group hi-quantity" min="1" aria-label="Cantidad" available-qty="296">
+
 
 

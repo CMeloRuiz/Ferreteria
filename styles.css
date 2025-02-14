@@ -13,7 +13,7 @@ header {
     /* position: sticky;
     top: 0; */
     z-index: 3;
-    background: linear-gradient(to left, #061160, #090b64);
+    background-color: #00467e;
     height: 100px;
     padding: 0 100px;
     display: flex;
@@ -339,10 +339,82 @@ nav ul, a{
 }
 
 
+/*-----Steps Shopping-----*/
+
+.stepsWrapper {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stepShopping {
+    text-align: center;
+    width: 20vw;
+}
+
+.stepShopping img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.stepShopping h4 {
+    color: #1a0b56;
+    margin-bottom: 10px;
+}
+
+.stepShopping p {
+    font-size: 13px;
+    line-height: 1.2;
+}
 
 
+/*-----Footer-----*/
 
+.footerCont {
+    background-color: #050a35;
+    /* color: #ffffff; */
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.footerItem h4 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #757575;
+    display: inline-block;
+}
+
+.footerItem a, li {
+    color: #ffffff;
+    line-height: 35px;
+}
+
+.socialMedia {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.socialMediaItem {
+    background-color: #ffffff;
+    color: #050a35;
+    font-size: 25px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all;
+}
+
+.socialMediaItem:hover {
+    transform: scale(1.2);
+}
 
 
 
