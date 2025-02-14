@@ -204,7 +204,7 @@ nav ul, a{
 /*-----Featured Products-----*/
 
 .featuredProducts {
-    padding-top: 100px;
+    padding: 100px 0 30px 0;
     min-height: 100vh;
     background: #abaeb6;
 }
@@ -306,6 +306,41 @@ nav ul, a{
         display: none;
     }
 }
+
+
+/*-----Benefits-----*/
+
+.benefits {
+    padding: 100px;
+    background: #d7d7d7;
+}
+
+.benefits h2 {
+    color: #434449;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.benefitsBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefit {
+    color: #3F3A3A;
+    width: 300px;
+    height: 300px;
+}
+
+.benefit i {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+
 
 
 

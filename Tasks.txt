@@ -3,17 +3,19 @@
 Inicio = Jueves 6 de febrero de 2025
 Plazo maximo entrega = 6 de Marzo de 2025
 
-- Crear barra de busqueda en el header.
+- Crear barra de busqueda en el header y programarla para que busque la palabra dada por el usuario.
 - Bajar imagen de fondo del hero.
 - Crear cotizacion pagina web y pasarsela al cliente.
 - Crear cuenta de cobro.
-- Cambiar las imagenes del slider infinito, de svg a otro formato (phg, jpg) "OJO IMPORTANTE"
 - Arreglar el contenido del hero (texto).
+- En el menu del header colocar la opcion "Productos" y desplegar las categorias cuando se haga click.
+- Pasar los elementos del Carousel automaticamente en "Productos destacados" y parar cuando se ponga el mouse encima.
+- Arreglar el bloqueo del slider de las marcas.
 
 Secciones (Pagina Principal):
 * Marcas de productos con las que se trabaja ***
 * Mosaico de categorias de productos ***
-* Productos destacados
+* Productos destacados ***
   - Taladro *
   - Alicates *
   - Destornillador *
@@ -23,8 +25,12 @@ Secciones (Pagina Principal):
   - Pulidora *
   - Interruptor triple *
 	
-* Beneficios (Por que comprar en nuestra ferreteria realizar un mosacio como el de VortexDev)
+* Beneficios (Por que comprar en nuestra ferreteria realizar un mosaico como el de VortexDev) ***
 * Pasos o procedimiento para comprar un producto (bien grafico)
+1. Explora y elige tus productos
+2. Añádelos a tu carrito
+3. Elige tu método de pago
+4. Recibe tu pedido en casa
 
 Pedir al cliente:
 * Marcas con las que trabaja (las que mas pueda)
@@ -33,3 +39,5 @@ Pedir al cliente:
 
 
 <input type="number" name="qty" value="1" class="input-group hi-quantity" min="1" aria-label="Cantidad" available-qty="296">
+
+
