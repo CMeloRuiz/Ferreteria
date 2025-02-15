@@ -373,10 +373,13 @@ nav ul, a{
 
 .footerCont {
     background-color: #050a35;
-    /* color: #ffffff; */
     padding: 100px;
     display: flex;
     justify-content: space-between;
+}
+
+.footerItem {
+    width: 20vw;
 }
 
 .footerItem h4 {
@@ -391,6 +394,11 @@ nav ul, a{
 .footerItem a, li {
     color: #ffffff;
     line-height: 35px;
+    transition: 0.5s all;
+}
+
+.footerLinks:hover {
+    padding-left: 10px;
 }
 
 .socialMedia {
