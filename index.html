@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/a7fa5fd2a2.js" crossorigin="anonymous"></script>
+    <title>Virtual Store</title>
+</head>
+<body>
+    <header>
+        <div class="header-container" id="header">
+            <div class="main-logo">
+                <h1><a href="./index.html">Ferreteria</a></h1>
+            </div>
+            <nav>
+                <ul id="menu-nav">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./products.html">Productos</a></li>
+                    <li><a href="./about.html">Acerca de</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-list" onclick="triggerMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <script>
+            let menuNav = document.getElementById("menu-nav");
+            menuNav.style.maxHeight = "0px";
+
+            function triggerMenu() {
+                if (menuNav.style.maxHeight === "0px") {
+                    menuNav.style.maxHeight = "300px";
+                }   else {
+                    menuNav.style.maxHeight = "0px";
+                }
+            }
+        </script> 
+
+        <!-- Esto se hace para cuando se le de "scroll down" el header se encoja -->
+        <script>
+            window.onscroll = function() {
+                if (document.documentElement.scrollTop > 50) {
+                    document.getElementById("header").style.height = "70px";
+                    document.getElementById("header").style.fontSize = "14px";
+                    document.querySelector(".menu-list i").style.fontSize = "26px";
+                    document.querySelector("nav ul").style.top = "70px";
+                } else {
+                    document.getElementById("header").style.height = "100px";
+                    document.getElementById("header").style.fontSize = "16px";
+                    document.querySelector(".menu-list i").style.fontSize = "30px";
+                    document.querySelector("nav ul").style.top = "100px";
+                };
+            };
+        </script>  
+    </header>
+
+    <main>
+        <section class="hero">
+            <article class="heroInfo">
+                <div class="heroInfoCont">
+                    <h2>Titulo Presentacion</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et architecto sit deleniti nulla neque odit suscipit alias porro, similique quasi magnam? Voluptatibus non nesciunt odio, minima inventore doloremque facilis impedit.</p>
+                </div>
+                <div class="heroContactBox">
+                    <div class="heroEmailContact">
+                        <i class="fa-solid fa-envelope" style="color: rgb(87, 36, 181);"></i>
+                        <span>Contactanos</span>
+                    </div>
+                    <div class="heroPhoneContact">
+                        <i class="fa-solid fa-phone" style="color: green;"></i>
+                        <span>+57 1234567890</span>
+                    </div>
+                </div>    
+            </article>
+        </section>
+
+        <section class="brands">
+            <h2>Marcas Aliadas</h2>
+            <article class="logos">
+                <div class="logos-slide">
+                    <img src="./Images/logos/3m.svg" alt="3m">
+                    <img src="./Images/logos/bosch.svg" alt="bosch">
+                    <img src="./Images/logos/cemex.svg" alt="cemex">
+                    <img src="./Images/logos/dewalt.svg" alt="dewalt">
+                    <img src="./Images/logos/makita.svg" alt="makita">
+                    <img src="./Images/logos/milwaukee.svg" alt="milwaukee">
+                    <img src="./Images/logos/truper.svg" alt="truper">
+                    <img src="./Images/logos/stanley.png" alt="stanley">
+                </div>
+            </article>
+            <script>
+                var copy = document.querySelector(".logos-slide").cloneNode(true);
+                document.querySelector(".logos").appendChild(copy);
+            </script>
+        </section>
+
+        <section class="productCategory">
+            <h2>Categoria de Productos</h2>
+            <article class="contProductCategory">
+                <a href="#" class="boxCategory">
+                    <img src="./Images/tools.png" alt="ruler logo">
+                    <span>Herramientas</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/paint.png" alt="ruler logo">
+                    <span>Pinturas y <br>Complementos</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/adhesives.png" alt="ruler logo">
+                    <span>Adhesivos</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/electricity.png" alt="ruler logo">
+                    <span>Iluminacion y <br>Electricos</span>
+                </a>
+
+                <a href="#" class="boxCategory">
+                    <img src="./Images/lock.png" alt="ruler logo">
+                    <span>Cerrajeria</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/screw.png" alt="ruler logo">
+                    <span>Tornilleria</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/plumbing.png" alt="ruler logo">
+                    <span>Plomeria</span>
+                </a>
+                <a href="#" class="boxCategory">
+                    <img src="./Images/helmet.png" alt="ruler logo">
+                    <span>Construccion</span>
+                </a>
+            </article>
+        </section>
+
+        <section class="featuredProducts">
+            <h2>Productos Destacados</h2>
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">
+                            <img src="./Images/Products/taladro-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Taladro</h2>
+                            <p class="user-profession">$450.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>            
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./Images/Products/alicates-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Alicates</h2>
+                            <p class="user-profession">$56.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./Images/Products/destornillador-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Destornillador</h2>
+                            <p class="user-profession">$32.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./Images/Products/cinta_aislante-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Cinta Aislante</h2>
+                            <p class="user-profession">$15.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./Images/Products/cinta_enmascarar-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Cinta de Enmascarar</h2>
+                            <p class="user-profession">$20.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./Images/Products/brocha-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Brocha</h2>
+                            <p class="user-profession">$63.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./Images/Products/pulidora-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Pulidora</h2>
+                            <p class="user-profession">$506.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+        
+                        <div class="card-item swiper-slide">
+                            <img src="./Images/Products/interruptor-rbg.png" alt="User Image" class="user-image">
+                            <h2 class="product-name">Interruptor Triple</h2>
+                            <p class="user-profession">$42.000</p>
+                            <div class="quantityProduct">
+                                <input type="number" name="qty" value="1" min="1" aria-label="Cantidad" available-qty="200" class="quantity">
+                                <button class="message-button">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>  
+                        </div>
+                    </div>
+        
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script src="./featured_products.js"></script>
+        </section>
+
+        <section class="benefits">
+            <h2>¿Por que Elegir Nuestra Ferreteria?</h2>
+            <article class="benefitsContainer">
+                <div class="benefit">
+                    <i class="fa-solid fa-truck" style="color: rgb(194, 31, 31);"></i>
+                    <h3>Entrega Segura Garantizada</h3>
+                    <p>Recibe tus productos en la puerta de tu hogar con total confianza. Nuestro servicio de entrega es rápido y seguro. Seguimiento en tiempo real para mayor tranquilidad.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fa-solid fa-star" style="color: rgb(7, 139, 57);"></i>
+                    <h3>Variedad y Calidad</h3>
+                    <p>Ofrecemos un amplio catálogo con productos de alta calidad. Trabajamos con las mejores marcas del mercado. Encuentra todo lo que necesitas en un solo lugar.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fa-solid fa-sack-dollar" style="color: rgb(23, 39, 161);"></i>
+                    <h3>Precios Competitivos Siempre</h3>
+                    <p>Obtén los mejores precios sin comprometer la calidad. Comparte tus proyectos con nosotros y ahorra en cada compra. Tu economía es nuestra prioridad.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fa-solid fa-headset" style="color: rgb(229, 211, 51);"></i>
+                    <h3>Atención Personalizada Online</h3>
+                    <p>Te asesoramos en cada compra para que elijas lo mejor. Nuestro equipo de expertos está listo para resolver tus dudas. Atención rápida y sin complicaciones.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fa-solid fa-shield" style="color: rgb(126, 62, 203);"></i>
+                    <h3>Compra Fácil y Segura</h3>
+                    <p>Haz tus pedidos en pocos clics con total confianza. Ofrecemos múltiples métodos de pago seguros. Protegemos tus datos para una experiencia sin riesgos.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fa-solid fa-clock" style="color: rgb(141, 19, 66);"></i>
+                    <h3>Disponibilidad 24/7 Online</h3>
+                    <p>Compra cuando quieras, sin límites de horario. Nuestra tienda en línea está siempre activa para ti. Encuentra lo que buscas en cualquier momento.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="stepsShopping">
+            <article class="stepsWrapper">
+                <div class="stepShopping">
+                    <img src="./Images/Steps/find.png" alt="Buscando">
+                    <h4>Explora y elige tus productos</h4>
+                    <p>Navega por nuestro catálogo y encuentra todo lo que necesitas.</p>
+                </div>
+                <div class="stepShopping">
+                    <img src="./Images/Steps/cart.png" alt="Buscando">
+                    <h4>Añádelos a tu carrito</h4>
+                    <p>Selecciona los productos y agrégalos fácilmente a tu pedido.</p>
+                </div>
+                <div class="stepShopping">
+                    <img src="./Images/Steps/pay.png" alt="Buscando">
+                    <h4>Elige tu método de pago</h4>
+                    <p>Paga de forma segura con la opción que mejor te convenga.</p>
+                </div>
+                <div class="stepShopping">
+                    <img src="./Images/Steps/truck.png" alt="Buscando">
+                    <h4>Recibe tu pedido en casa</h4>
+                    <p>Te lo enviamos rápido y seguro hasta la puerta de tu hogar o negocio.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-item">
+                <h3>FERRETERIA</h3>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Formulario de Contacto</a></li>
+                    <li><a href="#">Proceso de Compra</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>CATEGORIAS</h3>
+                <ul>
+                    <li><a href="./products.html">Todos los productos</a></li>
+                    <li><a href="#">Herramientas</a></li>
+                    <li><a href="#">Pinturas</a></li>
+                    <li><a href="#">Adhesivos</a></li>
+                    <li><a href="#">Electricos</a></li>
+                    <li><a href="#">Cerrajeria</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>ENLACES RAPIDOS</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>CONTACTO</h3>
+                <ul>
+                    <li>Telefono: +57 1234567890</li>
+                    <li>Correo: test@gmail.com</li>
+                </ul>
+                <div class="footer-social-media">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

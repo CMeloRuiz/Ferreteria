@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./about.css">
+    <script src="https://kit.fontawesome.com/a7fa5fd2a2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header-container" id="header">
+            <div class="main-logo">
+                <h1><a href="./index.html">Ferreteria</a></h1>
+            </div>
+            <nav>
+                <ul id="menu-nav">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./products.html">Productos</a></li>
+                    <li><a href="./about.html">Acerca de</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-list" onclick="triggerMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <script>
+            let menuNav = document.getElementById("menu-nav");
+            menuNav.style.maxHeight = "0px";
+
+            function triggerMenu() {
+                if (menuNav.style.maxHeight === "0px") {
+                    menuNav.style.maxHeight = "300px";
+                }   else {
+                    menuNav.style.maxHeight = "0px";
+                }
+            }
+        </script> 
+
+        <!-- Esto se hace para cuando se le de "scroll down" el header se encoja -->
+        <script>
+            window.onscroll = function() {
+                if (document.documentElement.scrollTop > 50) {
+                    document.getElementById("header").style.height = "70px";
+                    document.getElementById("header").style.fontSize = "14px";
+                    document.querySelector(".menu-list i").style.fontSize = "26px";
+                    document.querySelector("nav ul").style.top = "70px";
+                } else {
+                    document.getElementById("header").style.height = "100px";
+                    document.getElementById("header").style.fontSize = "16px";
+                    document.querySelector(".menu-list i").style.fontSize = "30px";
+                    document.querySelector("nav ul").style.top = "100px";
+                };
+            };
+        </script>  
+    </header>
+
+    <main></main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-item">
+                <h3>FERRETERIA</h3>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Formulario de Contacto</a></li>
+                    <li><a href="#">Proceso de Compra</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>CATEGORIAS</h3>
+                <ul>
+                    <li><a href="./products.html">Todos los productos</a></li>
+                    <li><a href="#">Herramientas</a></li>
+                    <li><a href="#">Pinturas</a></li>
+                    <li><a href="#">Adhesivos</a></li>
+                    <li><a href="#">Electricos</a></li>
+                    <li><a href="#">Cerrajeria</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>ENLACES RAPIDOS</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>CONTACTO</h3>
+                <ul>
+                    <li>Telefono: +57 1234567890</li>
+                    <li>Correo: test@gmail.com</li>
+                </ul>
+                <div class="footer-social-media">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
