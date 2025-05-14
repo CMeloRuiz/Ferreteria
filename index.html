@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     <script src="https://kit.fontawesome.com/a7fa5fd2a2.js" crossorigin="anonymous"></script>
-    <title>Virtual Store</title>
+    <title>Comercializadora Gonzalez</title>
 </head>
 <body>
     <header>
@@ -23,10 +24,17 @@
                     <li><a href="./contact.html">Contacto</a></li>
                 </ul>
             </nav>
+
+            <div id="cart-icon">
+				<i class="ri-shopping-cart-2-line"></i>
+				<span class="cart-item-count"></span>
+			</div>
+
             <div class="menu-list" onclick="triggerMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
+
         <script>
             let menuNav = document.getElementById("menu-nav");
             menuNav.style.maxHeight = "0px";
@@ -40,7 +48,7 @@
             }
         </script> 
 
-        <!-- Esto se hace para cuando se le de "scroll down" el header se encoja -->
+        <!-- Esto se hace para que cuando se le de "scroll down" el header se encoja -->
         <script>
             window.onscroll = function() {
                 if (document.documentElement.scrollTop > 50) {
@@ -60,7 +68,7 @@
 
     <main>
         <section class="hero">
-            <article class="heroInfo">
+            <!-- <article class="heroInfo">
                 <div class="heroInfoCont">
                     <h2>Titulo Presentacion</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et architecto sit deleniti nulla neque odit suscipit alias porro, similique quasi magnam? Voluptatibus non nesciunt odio, minima inventore doloremque facilis impedit.</p>
@@ -75,7 +83,7 @@
                         <span>+57 1234567890</span>
                     </div>
                 </div>    
-            </article>
+            </article> -->
         </section>
 
         <section class="brands">
@@ -308,11 +316,8 @@
                 <h3>CATEGORIAS</h3>
                 <ul>
                     <li><a href="./products.html">Todos los productos</a></li>
-                    <li><a href="#">Herramientas</a></li>
-                    <li><a href="#">Pinturas</a></li>
-                    <li><a href="#">Adhesivos</a></li>
-                    <li><a href="#">Electricos</a></li>
-                    <li><a href="#">Cerrajeria</a></li>
+                    <li><a href="#">Iluminacion</a></li>
+                    <li><a href="#">Ferreteria</a></li>
                 </ul>
             </div>
             <div class="footer-item">

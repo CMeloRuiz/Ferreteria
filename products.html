@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./products.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     <script src="https://kit.fontawesome.com/a7fa5fd2a2.js" crossorigin="anonymous"></script>
-    <title>Virtual Store</title>
+    <title>Comercializadora Gonzalez</title>
 </head>
 <body>
     <header>
@@ -22,10 +23,17 @@
                     <li><a href="./contact.html">Contacto</a></li>
                 </ul>
             </nav>
+
+            <div id="cart-icon">
+				<i class="ri-shopping-cart-2-line"></i>
+				<span class="cart-item-count"></span>
+			</div>
+
             <div class="menu-list" onclick="triggerMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
+
         <script>
             let menuNav = document.getElementById("menu-nav");
             menuNav.style.maxHeight = "0px";
@@ -39,7 +47,7 @@
             }
         </script> 
 
-        <!-- Esto se hace para cuando se le de "scroll down" el header se encoja -->
+        <!-- Esto se hace para que cuando se le de "scroll down" el header se encoja -->
         <script>
             window.onscroll = function() {
                 if (document.documentElement.scrollTop > 50) {
@@ -59,33 +67,77 @@
 
     <!-- Main -->
     <main class="products">
+
+        <div class="cart">
+			<h2 class="cart-title">Your Cart</h2>
+			<div class="cart-content">
+				<!-- <div class="cart-box">
+					<img src="./Images/product1.jpg" class="cart-img">
+					<div class="cart-detail">
+						<h2 class="cart-product-title">Casual Black Polo</h2>
+						<span class="cart-price">$100</span>
+						<div class="cart-quantity">
+							<button id="decrement">-</button>
+							<span class="number">1</span>
+							<button id="increment">+</button>
+						</div>
+					</div>
+					<i class="ri-delete-bin-line cart-remove"></i>
+				</div> -->
+			</div>
+			<div class="total">
+				<div class="total-title">Total</div>
+				<div class="total-price">$0</div>
+			</div>
+			<button class="btn-buy">Buy Now</button>
+			<i class="ri-close-line" id="cart-close"></i>
+		</div>
+        
         <section class="products-section">
-            <div class="filter-container">
+            <article class="filter-container">
                 <label for="products">Categoria:</label>
                 <select value="todo" name="products" id="filter-product" class="filter-select">
                     <option value="todo" selected>todo</option>
-                    <option value="herramientas">herramientas</option>
-                    <option value="pinturas">pinturas</option>
-                    <option value="adhesivos">adhesivos</option>
-                    <option value="electricos">electricos</option>
-                    <option value="cerrajeria">cerrajeria</option>
+                    <option value="iluminacion">iluminacion</option>
+                    <option value="ferreteria">ferreteria</option>
                 </select>
-            </div>
-            <div class="products-container" id="products-container">
+            </article>
 
+            <article class="products-container" id="products-container">
                 <!-- <div class="product-item">
-                    <div class="product-image">
-                        <img src="./Images/Products/alicates-rbg.png" alt="alicates">
-                    </div>
-                    <h3>Alicates</h3>
-                    <p>35000</p>
-                    <button class="adding-btn">Adicionar</button>
+                    <img src="./Images/Products/alicates2-rbg.png" alt="">
+                    <h3>ALICATE AISLADO 1000V 8 84-002</h3>
+                    <a href="#" class="product-btn">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>COTIZAR</p>
+                    </a>
                 </div> -->
+            </article>
 
-            </div>
-            <script src="./products.js"></script>
-            <script src="./app.js"></script>
+            <article class="pagination">
+                <a href="#"><</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">></a>
+            </article>
+
+            <!-- <article class="pagination">
+                <div href="#"><</div>
+                <div href="#">1</div>
+                <div href="#">2</div>
+                <div href="#">3</div>
+                <div href="#">4</div>
+                <div href="#">5</div>
+                <div href="#">></div>
+            </article> -->
+
         </section>
+        <script src="./products.js"></script>
+        <script src="./index.js"></script>
+        <script src="./cart.js"></script>
     </main>
 
     <footer>
@@ -102,11 +154,8 @@
                 <h3>CATEGORIAS</h3>
                 <ul>
                     <li><a href="./products.html">Todos los productos</a></li>
-                    <li><a href="#">Herramientas</a></li>
-                    <li><a href="#">Pinturas</a></li>
-                    <li><a href="#">Adhesivos</a></li>
-                    <li><a href="#">Electricos</a></li>
-                    <li><a href="#">Cerrajeria</a></li>
+                    <li><a href="#">Iluminacion</a></li>
+                    <li><a href="#">Ferreteria</a></li>
                 </ul>
             </div>
             <div class="footer-item">
