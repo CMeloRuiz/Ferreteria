@@ -9,7 +9,7 @@
         #252526c3 45%, 
         rgba(13, 27, 42, 0.6) 60%, 
         rgba(13, 27, 42, 0.0) 75%),
-        url('/Images/bg_image_hero.jpg') right center/cover no-repeat;
+        url('./Images/bg_image_hero.jpg') right center/cover no-repeat;
     padding-left: 5%;
 }
 
