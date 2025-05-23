@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comercializadora Gonzalez | Productos</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./products.css" />
+  <link rel="icon" href="./Images/favicon.png">
+  <script src="https://kit.fontawesome.com/a7fa5fd2a2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="./index.html"><img src="./Images/logo.png" alt="logo pricipal"></a>
+    </div>
+    <nav>
+      <ul id="menu-list">
+        	<li><a href="./index.html">INICIO</a></li>
+					<li><a href="./products.html">PRODUCTOS</a></li>
+					<li><a href="./nosotros.html">NOSOTROS</a></li>
+					<li><a href="./contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar producto..." autocomplete="off" spellcheck="false"/>
+      <div id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></div>
+    </div>
+
+    <div class="search-icon">
+      <i class="fa-solid fa-magnifying-glass" onclick="toggleSearch()"></i>
+    </div>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
+  </header>
+  <script>
+    let menuList = document.getElementById("menu-list");
+    let searchBar = document.querySelector(".search-bar");
+    menuList.style.maxHeight = "0px";
+    searchBar.style.display = "";
+
+    function toggleMenu() {
+      if(menuList.style.maxHeight == "0px") {
+        menuList.style.maxHeight = "300px";
+      } else {
+        menuList.style.maxHeight = "0px";
+      };
+    }	
+
+    function toggleSearch() {
+      if(searchBar.style.display == "") {
+        searchBar.style.display = "flex";
+      } else {
+        searchBar.style.display = "none";
+        searchBar.style.display = "";
+      }
+    }
+	</script>
+
+  <main>
+    <div class="content-container">
+      <section class="product-section">
+
+        <div class="filters">
+          <select id="categoryFilter">
+            <option value="all">Todas las categorías</option>
+          </select>
+        </div>
+
+        <div class="grid" id="productGrid"></div>
+        <div class="pagination" id="pagination"></div>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-item">
+        <h3>FERRETERIA</h3>
+        <ul>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Formulario de Contacto</a></li>
+          <li><a href="#">Proceso de Compra</a></li>
+        </ul>
+      </div>
+      <div class="footer-item">
+        <h3>CATEGORIAS</h3>
+        <ul>
+          <li><a href="./products.html">Todos los productos</a></li>
+          <li><a href="#">Iluminacion</a></li>
+          <li><a href="#">Ferreteria</a></li>
+        </ul>
+      </div>
+      <div class="footer-item">
+        <h3>ENLACES RAPIDOS</h3>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-item">
+        <h3>CONTACTO</h3>
+        <ul>
+          <li>Telefono: +57 1234567890</li>
+          <li>Correo: test@gmail.com</li>
+        </ul>
+        <div class="footer-social-media">
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

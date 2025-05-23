@@ -1,0 +1,225 @@
+.hero-container {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    background: 
+        linear-gradient(to right, 
+        #252526c3 0%, 
+        #252526c3 45%, 
+        rgba(13, 27, 42, 0.6) 60%, 
+        rgba(13, 27, 42, 0.0) 75%),
+        url('/Images/bg_image_hero.jpg') right center/cover no-repeat;
+    padding-left: 5%;
+}
+
+.hero-text {
+    width: 50vw;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-right: auto;
+  color: #c7c7c7;
+}
+
+#dynamic-word {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+#dynamic-word.fade-out {
+  opacity: 0;
+}
+
+.highlight {
+  color: #7a91e3; /* Aquí pones el color que quieras */
+  font-weight: bold; /* Opcional, para que resalte más */
+}
+
+.hero-image {
+    width: 50vw;
+    height: 350px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-buttons > a {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #212121;
+    border-radius: 10px;
+    margin: 20px 10px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+    transition: all 0.5s;
+}
+
+.hero-buttons > a:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width:800px) {
+    .hero-container {
+        padding: 50px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 80vw;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+}
+
+/* Marcas aliadas */
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.brands h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    color: #515151;
+}
+
+.brands-container {
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: #fff;
+    white-space: nowrap;
+    position: relative;
+}
+
+.brands-container:before,
+.brands-container:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.brands-container:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+}
+
+.brands-container:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+}
+
+/* .brands-container:hover .brands-slide {
+    animation-play-state: paused;
+} */
+
+.brands-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.brands-slide > img {
+    height: 50px;
+    margin: 0 40px;
+}
+
+/* Beneficios */
+
+.benefits {
+    padding: 0 100px 100px;
+    background: #9e9e9e;
+    color: #3F3A3A;
+}
+
+.benefits h2 {
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #515151;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+}
+
+.benefit-item i {
+    font-size: 50px;
+    margin-bottom: 20px;
+} 
+
+@media (max-width: 700px) {
+    .benefits {
+        padding: 80px 50px;
+    }
+}
+
+/* Steps shopping */
+
+.steps-shopping h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    color: #515151;
+}
+
+.steps-container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+}
+
+.step {
+    text-align: center;
+}
+
+.step img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.step h4 {
+    color: #1a0b56;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 13px;
+    line-height: 1.2;
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Comercializadora Gonzalez | Inicio</title>
+		<link rel="stylesheet" href="./styles.css">
+		<link rel="stylesheet" href="./index.css">
+		<link rel="icon" href="./Images/favicon.png">
+		<script src="https://kit.fontawesome.com/a7fa5fd2a2.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="./index.html"><img src="./Images/logo.png" alt="logo pricipal"></a>
+			</div>
+			<nav>
+				<ul id="menu-list">
+					<li><a href="./index.html">INICIO</a></li>
+					<li><a href="./products.html">PRODUCTOS</a></li>
+					<li><a href="./nosotros.html">NOSOTROS</a></li>
+					<li><a href="./contacto.html">CONTACTO</a></li>
+				</ul>
+			</nav>
+
+			<div class="search-bar">
+				<input type="text" id="searchInput" placeholder="Buscar producto..." autocomplete="off" spellcheck="false"/>
+				<div id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></div>
+			</div>
+
+			<div class="search-icon">
+				<i class="fa-solid fa-magnifying-glass" onclick="toggleSearch()"></i>
+			</div>
+			<div class="menu-icon">
+				<i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+			</div>
+		</header>
+		<script>
+			let menuList = document.getElementById("menu-list");
+			let searchBar = document.querySelector(".search-bar");
+			menuList.style.maxHeight = "0px";
+			searchBar.style.display = "";
+
+			function toggleMenu() {
+				if(menuList.style.maxHeight == "0px") {
+					menuList.style.maxHeight = "300px";
+				} else {
+					menuList.style.maxHeight = "0px";
+				};
+			}	
+
+			function toggleSearch() {
+				if(searchBar.style.display == "") {
+					searchBar.style.display = "flex";
+				} else {
+					searchBar.style.display = "none";
+					searchBar.style.display = "";
+				}
+			}
+		</script>
+
+		<main>
+			<section class="hero">
+				<div class="hero-container">
+					<div class="hero-text">
+						<h1 class="hero-title">Soluciones<br>duraderas para tu<br><span id="dynamic-word" class="highlight">Hogar</span></h1>
+						<p class="hero-subtitle">
+						Contamos con un amplio catálogo de productos para tus proyectos y reparaciones.
+						Desde herramientas hasta material eléctrico, todo en un solo lugar.
+						Atención confiable, precios accesibles y calidad garantizada.
+						</p>
+						<div class="hero-buttons">
+							<a href="#">
+								<i class="fa-brands fa-whatsapp" style="color: #40a332; font-size: 22px;font-weight: bolder;"></i>
+								<p>+57 1234567890</p>
+							</a>
+							<a href="#">
+								<i class="fa-solid fa-envelope" style="color: #35bad8; font-size: 20px;font-weight: bold;"></i>
+								<p>test@gmail.com</p>
+							</a>
+						</div>
+					</div>
+					<!-- <div class="hero-image">
+						<img src="./Images/hero_image.jpg" alt="">
+					</div> -->
+				</div>
+				<script>
+					const words = ["Hogar", "Negocio", "Taller", "Construcción", "Oficina"];
+					let index = 0;
+					const dynamicWord = document.getElementById("dynamic-word");
+
+					function changeWord() {
+					// Animación de salida
+					dynamicWord.classList.add("fade-out");
+
+					setTimeout(() => {
+						// Cambiar palabra
+						index = (index + 1) % words.length;
+						dynamicWord.textContent = words[index];
+
+						// Animación de entrada
+						dynamicWord.classList.remove("fade-out");
+					}, 500); // Tiempo igual al de la transición en CSS
+					}
+
+					// Cambia la palabra cada 3 segundos
+					setInterval(changeWord, 3000);
+				</script>
+			</section>
+
+			<section class="brands">
+				<h2>Nuestras marcas aliadas</h2>
+				<div class="brands-container">
+					<div class="brands-slide">
+						<img src="./Images/Marcas/3m.svg" alt="3M">
+						<img src="./Images/Marcas/bosch.svg" alt="bosch">
+						<img src="./Images/Marcas/cemex.svg" alt="cemex">
+						<img src="./Images/Marcas/dewalt.svg" alt="dewalt">
+						<img src="./Images/Marcas/milwaukee.svg" alt="milwaukee">
+						<img src="./Images/Marcas/makita.svg" alt="makita">
+						<img src="./Images/Marcas/stanley.png" alt="stanley">
+						<img src="./Images/Marcas/truper.svg" alt="truper">
+					</div>
+				</div>
+				<script>
+					var copy = document.querySelector(".brands-slide").cloneNode(true);
+					document.querySelector(".brands-container").appendChild(copy);
+				</script>
+			</section>
+
+			<section class="benefits">
+				<h2>¿Por que elegirnos?</h2>
+				<article class="benefits-container">
+					<div class="benefit-item">
+						<i class="fa-solid fa-truck" style="color: rgb(194, 31, 31);"></i>
+						<h3>Entrega Segura Garantizada</h3>
+						<p>Recibe tus productos en la puerta de tu hogar con total confianza. Nuestro servicio de entrega es rápido y seguro. Seguimiento en tiempo real para mayor tranquilidad.</p>
+					</div>
+					<div class="benefit-item">
+						<i class="fa-solid fa-star" style="color: rgb(7, 139, 57);"></i>
+						<h3>Variedad y Calidad</h3>
+						<p>Ofrecemos un amplio catálogo con productos de alta calidad. Trabajamos con las mejores marcas del mercado. Encuentra todo lo que necesitas en un solo lugar.</p>
+					</div>
+					<div class="benefit-item">
+						<i class="fa-solid fa-sack-dollar" style="color: rgb(23, 39, 161);"></i>
+						<h3>Precios Competitivos Siempre</h3>
+						<p>Obtén los mejores precios sin comprometer la calidad. Comparte tus proyectos con nosotros y ahorra en cada compra. Tu economía es nuestra prioridad.</p>
+					</div>
+					<div class="benefit-item">
+						<i class="fa-solid fa-headset" style="color: rgb(227, 125, 22);"></i>
+						<h3>Atención Personalizada Online</h3>
+						<p>Te asesoramos en cada compra para que elijas lo mejor. Nuestro equipo de expertos está listo para resolver tus dudas. Atención rápida y sin complicaciones.</p>
+					</div>
+					<div class="benefit-item">
+						<i class="fa-solid fa-shield" style="color: rgb(126, 62, 203);"></i>
+						<h3>Compra Fácil y Segura</h3>
+						<p>Haz tus pedidos en pocos clics con total confianza. Ofrecemos múltiples métodos de pago seguros. Protegemos tus datos para una experiencia sin riesgos.</p>
+					</div>
+					<div class="benefit-item">
+						<i class="fa-solid fa-clock" style="color: rgb(141, 19, 66);"></i>
+						<h3>Disponibilidad 24/7 Online</h3>
+						<p>Compra cuando quieras, sin límites de horario. Nuestra tienda en línea está siempre activa para ti. Encuentra lo que buscas en cualquier momento.</p>
+					</div>
+				</article>
+			</section>
+
+			<section class="steps-shopping">
+				<h2>Pasos para realizar tu compra</h2>
+				<article class="steps-container">
+					<div class="step">
+						<img src="./Images/Steps/find.png" alt="Buscando">
+						<h4>Explora y elige lo que deseas</h4>
+						<p>Navega por nuestro catálogo y encuentra todo lo que necesitas.</p>
+					</div>
+					<div class="step">
+						<img src="./Images/Steps/whatsapp.png" alt="Carrito">
+						<h4>Cotiza tus productos</h4>
+						<p>Tenemos un canal de Whatsapp para que cotices los productos seleccionados.</p>
+					</div>
+					<div class="step">
+						<img src="./Images/Steps/pay.png" alt="Medio de pago">
+						<h4>Realiza el pago</h4>
+						<p>Paga de forma segura con la opción que mejor te convenga.</p>
+					</div>
+					<div class="step">
+						<img src="./Images/Steps/truck.png" alt="Camion">
+						<h4>Recibe tu pedido en casa</h4>
+						<p>Te lo enviamos rápido y seguro hasta la puerta de tu hogar o negocio.</p>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<script>
+			const input = document.getElementById('searchInput');
+			const button = document.getElementById('searchBtn');
+
+			function handleSearch() {
+				const query = input.value.trim();
+				if (query) {
+					window.location.href = `products.html?search=${encodeURIComponent(query)}`;
+				}
+			}
+
+			button.addEventListener('click', handleSearch);
+			input.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter') {
+					handleSearch();
+				}
+			});
+		</script>
+
+		<footer>
+			<div class="footer-container">
+				<div class="footer-item">
+					<h3>FERRETERIA</h3>
+					<ul>
+					<li><a href="#">Nosotros</a></li>
+					<li><a href="#">Formulario de Contacto</a></li>
+					<li><a href="#">Proceso de Compra</a></li>
+					</ul>
+			</div>
+				<div class="footer-item">
+					<h3>CATEGORIAS</h3>
+					<ul>
+					<li><a href="./products.html">Todos los productos</a></li>
+					<li><a href="#">Iluminacion</a></li>
+					<li><a href="#">Ferreteria</a></li>
+					</ul>
+				</div>
+				<div class="footer-item">
+					<h3>ENLACES RAPIDOS</h3>
+					<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Productos</a></li>
+					<li><a href="#">Nosotros</a></li>
+					<li><a href="#">Contacto</a></li>
+					</ul>
+				</div>
+				<div class="footer-item">
+					<h3>CONTACTO</h3>
+					<ul>
+					<li>Telefono: +57 1234567890</li>
+					<li>Correo: test@gmail.com</li>
+					</ul>
+					<div class="footer-social-media">
+					<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+</html>
