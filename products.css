@@ -114,6 +114,10 @@
     padding: 100px 20px;
   }
 
+  .filters > select {
+    min-height: 50px;
+  }
+
   .filters > select > option {
     font-size: 10px;
   }
