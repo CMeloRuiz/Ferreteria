@@ -18,6 +18,12 @@
   border: 2px solid #ccc;
   padding: 10px;
   min-width: 300px;
+  min-height: 50px;
+  font-size: 16px;
+}
+
+.filters > select > option {
+  font-size: 16px;
 }
 
 .product-section {
@@ -41,10 +47,9 @@
 }
 
 .product-card img {
-  width: 100%;
+  width: 250px;
   height: 250px;
-  object-fit: cover;
-  transition: .3s;
+  transition: all .3s;
 }
 
 .product-card img:hover {
@@ -59,20 +64,26 @@
 }
 
 .product-card button {
-  padding: 0.5rem 1rem;
-  background-color: #3a4e91;
-  color: white;
   border: none;
-  cursor: pointer;
+  background-color: #1e1e55;
+  color: #fff;
+  margin: auto;
+  padding: 10px 50px;
   border-radius: 5px;
-  width: 150px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .product-card button > i {
-  font-size: 18px;
-  position: absolute;
-  left: 30px;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.product-card button:hover {
+  background-color: #3d3d83;
 }
 
 .pagination {
@@ -98,8 +109,12 @@
   cursor: default;
 }
 
-@media (max-width:400px) {
+@media (max-width:650px) {
   .content-container{
-    padding: 20px;
+    padding: 100px 20px;
+  }
+
+  .filters > select > option {
+    font-size: 10px;
   }
 }

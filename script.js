@@ -41,7 +41,7 @@ function renderProducts(productsToShow) {
       <h3>${product.name}</h3>
       <button>
         <i class="fa-brands fa-whatsapp"></i>
-        Cotizar
+        COTIZAR
       </button>
     `;
     productGrid.appendChild(card);

@@ -81,6 +81,7 @@
 
 @media (max-width:800px) {
     .hero-container {
+        background: linear-gradient(70deg, #3e3b3be7 40%, #202045dc 60%);
         padding: 50px 20px;
         flex-wrap: wrap;
         justify-content: center;
