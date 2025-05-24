@@ -1,5 +1,4 @@
 .content-container {
-  /* border: 4px solid black; */
   background-color: #9e9e9e;
   display: flex;
   padding: 50px;
@@ -35,7 +34,6 @@
 
 .product-card {
   box-shadow: 0 5px 5px 5px rgba(48, 48, 48, 0.2);
-  /* background-color: #ccc; */
   background-color: #fff;
   padding: 1rem;
   border-radius: 5px;
