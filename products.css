@@ -1,4 +1,5 @@
 .content-container {
+  /* border: 4px solid black; */
   background-color: #9e9e9e;
   display: flex;
   padding: 50px;
@@ -97,4 +98,10 @@
   background-color: #0056b3;
   color: #fff;
   cursor: default;
+}
+
+@media (max-width:400px) {
+  .content-container{
+    padding: 20px;
+  }
 }
