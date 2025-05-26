@@ -9,6 +9,7 @@ const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 const urlParams = new URLSearchParams(window.location.search);
 const searchParam = urlParams.get('search');
+const message = document.getElementById("no-results-message");
 
 
 function displayProducts(page) {
@@ -33,6 +34,14 @@ function displayProducts(page) {
 
 function renderProducts(productsToShow) {
   productGrid.innerHTML = '';
+
+  // Mostrar mensaje si no hay productos
+  if (productsToShow.length === 0) {
+    message.style.display = "block";
+  } else {
+    message.style.display = "none";
+  }
+
   productsToShow.forEach(product => {
     const card = document.createElement('div');
     card.className = 'product-card';

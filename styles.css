@@ -199,6 +199,14 @@ nav a {
     transform: scale(1.2);
 }
 
+.rights-reserved {
+  background-color: #112461;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
 @media (max-width:1000px) {
 
     .footer-container {
