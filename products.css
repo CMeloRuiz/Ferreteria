@@ -63,7 +63,7 @@
   color: #0000008c;
 }
 
-.product-card button {
+.product-card .cotizar-btn {
   border: none;
   background-color: #1e1e55;
   color: #fff;
@@ -77,13 +77,59 @@
   cursor: pointer;
 }
 
-.product-card button > i {
+.product-card .cotizar-btn > i {
   font-size: 20px;
   margin-right: 5px;
 }
 
-.product-card button:hover {
+.product-card .cotizar-btn:hover {
   background-color: #3d3d83;
+}
+
+/* DROPDOWN */
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #6d7074;
+  color: white;
+  padding: 6px 12px;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.dropdown-toggle:hover {
+  background-color: #949698;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: -80px;
+  background-color: white;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 10;
+  padding: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f2f2f2;
 }
 
 .pagination {

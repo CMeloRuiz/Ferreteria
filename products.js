@@ -378,3 +378,43 @@ productsList.sort((a, b) => {
     return 0;
 });
 
+
+// Archivo JSON desde base de datos MySQL
+
+// let productsList = [];
+
+// fetch('/api/products')
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log('Productos desde el backend:', data);
+//     productsList = data;
+//     displayProducts(1);
+//     populateCategories(productsList);
+//   })
+//   .catch(error => console.error('Error al cargar productos:', error));
+
+
+// Código para unificar productos
+const productosUnificados = [];
+
+productsList.forEach(producto => {
+    const claveBase = producto.name
+        .replace(/\b\d+(W|W)?\b/gi, '')
+        .replace(/\b(3000K|4000K|6500K|LUZ DIA|DESIGN)\b/gi, '')
+        .replace(/\b[0-9]+\*?[0-9]*\b/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    const existente = productosUnificados.find(p => p.clave === claveBase);
+
+    if (existente) {
+        existente.variantes.push(producto.name);
+    } else {
+        productosUnificados.push({
+            clave: claveBase,
+            cat: producto.cat,
+            img: producto.img,
+            variantes: [producto.name]
+        });
+    }
+});
